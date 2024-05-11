@@ -1,0 +1,30 @@
+﻿@model MundrosoftAssesment.Models.Users
+@{
+    ViewData["Title"] = "Signup";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1 class="text-center text-primary">Login</h1>
+
+            <form asp-controller="User" asp-action="Login" method="post">
+                <p class="text-center text-success">@TempData["error"]</p>
+                <p class="text-center text-success">@TempData["SuccessMessage"]</p>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="Email" placeholder="Enter email" required>
+                </div>
+                 <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="Password" placeholder="Enter password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="ConfirmPassword" placeholder="Confirm password" required>
+                </div>
+                <button type="submit" class="btn btn-success">Signup</button>
+            </form>
+        </div>
+    </div>
+</div>

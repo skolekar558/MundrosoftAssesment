@@ -1,0 +1,46 @@
+﻿@model MundrosoftAssesment.Models.Employees
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card-header">
+                <h1 class="text-center  text-primary">Add Employee</h1>
+                </div>
+                <div class="card-body">
+                <form method="post" asp-action="Create">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input asp-for="Name" class="form-control" placeholder="Enter the name" />
+                         <span asp-validation-for="Name"class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input asp-for="Email" class="form-control" placeholder="Enter the email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Salary</label>
+                        <input asp-for="Salary" class="form-control" placeholder="Enter the salary" />
+                        <span asp-validation-for="Salary" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input asp-for="City" class="form-control" placeholder="Enter the city" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="btn btn-sm btn-outline-success floatright"/>
+                    </div>
+                </form>
+
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
