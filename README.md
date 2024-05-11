@@ -106,6 +106,25 @@ Copy code
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 Replace "InitialCreate" with an appropriate migration name
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------## My database structure:
+Database Name:MundarisoftAssesment
+table structure:for this application i used two tables Employee and User.
+# User table structure:
+CREATE TABLE Users (
+    Id INT PRIMARY KEY IDENTITY,
+    Email NVARCHAR(255) NOT NULL,
+    Password NVARCHAR(255) NOT NULL
+);
+
+#Employee Table Structure:
+
+CREATE TABLE Employees (
+    Id INT PRIMARY KEY,
+    Name NVARCHAR(MAX) NOT NULL,
+    Email NVARCHAR(MAX) NOT NULL,
+    Salary BIGINT NOT NULL,
+    City NVARCHAR(MAX) NOT NULL
+);
 
 
 
